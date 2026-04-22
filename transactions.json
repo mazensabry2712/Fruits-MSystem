@@ -1,0 +1,29 @@
+{
+  "transactions": [
+    {
+      "id": 3,
+      "date": "2025-04-22",
+      "type": "شراء",
+      "fruit": "برتقال",
+      "quantity": 500,
+      "unit_price": 10,
+      "total_price": 5000,
+      "created_at": "2026-04-22T14:42:19.331Z"
+    },
+    {
+      "id": 4,
+      "date": "2026-04-22",
+      "type": "شراء",
+      "fruit": "بندق",
+      "quantity": 10,
+      "unit_price": 300,
+      "total_price": 3000,
+      "created_at": "2026-04-22T14:43:49.445Z"
+    }
+  ],
+  "nextId": 5,
+  "fruits": [
+    "برتقال",
+    "بندق"
+  ]
+}

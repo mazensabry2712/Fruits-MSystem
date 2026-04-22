@@ -1,0 +1,17 @@
+{
+  "name": "fruit-shop",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "نظام إدارة محل الفاكهة",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server-mysql.js",
+    "dev": "node --watch server-mysql.js",
+    "start:json": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.22.2"
+  }
+}

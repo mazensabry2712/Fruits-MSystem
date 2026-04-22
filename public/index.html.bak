@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة محل الفاكهة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🍎 نظام إدارة محل الفاكهة 🍊</h1>
+    </header>
+
+    <main>
+      <!-- Manage Fruits Section -->
+      <section class="form-section fruits-section">
+        <h2>إدارة الأصناف</h2>
+        <div class="fruits-manager">
+          <div class="add-fruit-form">
+            <input type="text" id="newFruitInput" placeholder="اسم الصنف الجديد (مثل: تفاح، برتقال، إلخ)">
+            <button class="btn btn-primary" onclick="addNewFruit()">➕ إضافة صنف</button>
+          </div>
+          <div class="fruits-list" id="fruitsList">
+            <!-- Dynamic fruits list -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Form for adding transactions -->
+      <section class="form-section">
+        <h2>إضافة عملية جديدة</h2>
+        <form id="transactionForm">
+          <div class="form-group">
+            <label for="date">التاريخ:</label>
+            <input type="date" id="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="type">نوع العملية:</label>
+            <select id="type" required>
+              <option value="">اختر نوع</option>
+              <option value="شراء">🛒 شراء</option>
+              <option value="بيع">💰 بيع</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fruit">نوع الفاكهة:</label>
+            <select id="fruit" required>
+              <option value="">اختر صنف</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">الكمية:</label>
+            <input type="number" id="quantity" placeholder="الكمية" min="0.1" step="0.1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="unitPrice">السعر للوحدة:</label>
+            <input type="number" id="unitPrice" placeholder="السعر" min="0" step="0.01" required>
+          </div>
+
+          <div class="form-group total">
+            <label>الإجمالي:</label>
+            <span id="totalDisplay">0.00</span> جنيه
+          </div>
+
+          <button type="submit" class="btn btn-primary">✅ إضافة العملية</button>
+        </form>
+      </section>
+
+      <!-- Tabs for different views -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="transactions">جميع العمليات</button>
+        <button class="tab-btn" data-tab="summary">ملخص يومي</button>
+      </div>
+
+      <!-- Transactions Table -->
+      <section id="transactions" class="tab-content active">
+        <h2>سجل العمليات</h2>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>التاريخ</th>
+              <th>نوع العملية</th>
+              <th>الصنف</th>
+              <th>الكمية</th>
+              <th>السعر / الوحدة</th>
+              <th>الإجمالي</th>
+              <th>الإجراء</th>
+            </tr>
+          </thead>
+          <tbody id="transactionsBody">
+            <!-- Dynamic rows -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Daily Summary -->
+      <section id="summary" class="tab-content">
+        <h2>الملخص اليومي</h2>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>التاريخ</th>
+              <th>إجمالي الشراء</th>
+              <th>إجمالي البيع</th>
+              <th>الربح/الخسارة</th>
+            </tr>
+          </thead>
+          <tbody id="summaryBody">
+            <!-- Dynamic rows -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
