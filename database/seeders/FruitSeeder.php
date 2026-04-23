@@ -12,7 +12,23 @@ class FruitSeeder extends Seeder
      */
     public function run(): void
     {
-        $fruits = ['تفاح', 'برتقال', 'موز', 'مانجو'];
+        $fruits = [
+            'تفاح',
+            'برتقال',
+            'موز',
+            'عنب',
+            'مانجو',
+            'كيوي',
+            'أناناس',
+            'رمان',
+            'شمام',
+            'جوافة',
+            'تين',
+            'توت',
+            'كرز',
+            'خوخ',
+            'إجاص',
+        ];
 
         foreach ($fruits as $fruit) {
             Fruit::firstOrCreate(['name' => $fruit]);
